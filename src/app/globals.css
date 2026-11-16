@@ -1,26 +1,169 @@
+/* ─── Google Fonts: Space Grotesk, Instrument Serif, JetBrains Mono ─── */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
+/* ─── Custom Theme Tokens ─── */
+@theme {
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-notebook-bg: #000000;
+  --color-notebook-surface: #121214;
+  --color-notebook-panel: #0D0D0F;
+  --color-notebook-border: #2E2E33;
+  --color-notebook-strong: #F2F2F2;
+  --color-notebook-text: #F2F2F2;
+  --color-notebook-muted: #A3A3A3;
+  --color-notebook-accent: #FB923C;
+
+  --shadow-dock: 3px 3px 0 #FB923C;
+  --shadow-card: 4px 4px 0 #1A1A1E;
+  --shadow-card-hover: 6px 6px 0 #1A1A1E;
+}
+
+/* ─── CSS Variables for Theming ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Default: Dark Plain Black */
+  --bg: #000000;
+  --grid-line: transparent;
+  --surface: #121214;
+  --panel: #0D0D0F;
+  --border: #2E2E33;
+  --border-strong: #F2F2F2;
+  --text: #F2F2F2;
+  --text-muted: #A3A3A3;
+  --accent: #FB923C;
+  --shadow-dock: 3px 3px 0 #FB923C;
+  --shadow-card: 4px 4px 0 #1A1A1E;
+  --card-hover-border: #FB923C;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html:not(.dark) {
+  /* Optional Light Paper Theme */
+  --bg: #F4F1EA;
+  --grid-line: transparent;
+  --surface: #FFFFFF;
+  --panel: #FAF8F5;
+  --border: #D4CEBF;
+  --border-strong: #1A1A1A;
+  --text: #1A1A1A;
+  --text-muted: #666666;
+  --accent: #C2410C;
+  --shadow-dock: 3px 3px 0 #C2410C;
+  --shadow-card: 4px 4px 0 #D4CEBF;
+  --card-hover-border: #C2410C;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  --bg: #000000;
+  --grid-line: transparent;
+  --surface: #121214;
+  --panel: #0D0D0F;
+  --border: #2E2E33;
+  --border-strong: #F2F2F2;
+  --text: #F2F2F2;
+  --text-muted: #A3A3A3;
+  --accent: #FB923C;
+  --shadow-dock: 3px 3px 0 #FB923C;
+  --shadow-card: 4px 4px 0 #1A1A1E;
+  --card-hover-border: #FB923C;
+}
+
+/* ─── Global Reset & Base Notebook Background ─── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  background-image: none;
+  color: var(--text);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography Helpers ─── */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* ─── Custom Engineering Notebook Shadows ─── */
+.dock-shadow {
+  box-shadow: var(--shadow-dock);
+}
+
+.card-shadow {
+  box-shadow: var(--shadow-card);
+}
+
+/* ─── Focus & Selection ─── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #161616;
+}
+
+/* ─── Accessible Skip Link ─── */
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.skip-to-content:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  z-index: 9999;
+}
+
+
+/* ─── Hide Next.js development overlay badge (bottom-left N logo) ─── */
+
+/* ─── Custom Animations ─── */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+.glow-core {
+  animation: glow-pulse 2.4s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dev-overlay],
+#__next-build-watcher {
+  display: none !important;
 }
