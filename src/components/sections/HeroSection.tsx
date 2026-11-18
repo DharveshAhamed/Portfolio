@@ -56,7 +56,7 @@ export default function HeroSection() {
           {/* Headline with serif italic orange accent */}
           <motion.h1
             variants={itemVariants}
-            className="text-5xl sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[112px] 2xl:text-[128px] font-bold tracking-[-3px] text-[var(--text)] leading-[0.95] max-w-7xl"
+            className="text-4xl sm:text-6xl md:text-8xl lg:text-[96px] xl:text-[112px] 2xl:text-[128px] font-bold tracking-tight sm:tracking-[-3px] text-[var(--text)] leading-[1.05] sm:leading-[0.95] max-w-7xl"
           >
             Hi, I am Dharvesh Ahamed. I craft complete web{' '}
             <span className="font-serif italic font-normal text-[var(--accent)] tracking-normal">

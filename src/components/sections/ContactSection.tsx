@@ -25,7 +25,7 @@ export default function ContactSection() {
       className="py-20 sm:py-28"
     >
       <Container>
-        <div className="rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-10 sm:p-16 lg:p-20 card-shadow">
+        <div className="rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-16 lg:p-20 card-shadow">
 
           {/* Heading */}
           <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--text)] leading-tight">

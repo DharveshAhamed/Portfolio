@@ -109,11 +109,11 @@ export default function Dock() {
   return (
     <nav
       aria-label="Interactive Navigation Dock"
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-[95vw]"
+      className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 max-w-[96vw] sm:max-w-[95vw]"
     >
       <div
         className={cn(
-          'flex items-center gap-2 p-2 rounded-full',
+          'flex items-center gap-1 sm:gap-2 p-1.5 sm:p-2 rounded-full',
           'bg-[var(--surface)] border border-[var(--border-strong)]',
           'dock-shadow transition-all duration-200'
         )}
@@ -133,7 +133,7 @@ export default function Dock() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 450, damping: 22 }}
               className={cn(
-                'min-h-[46px] min-w-[46px] px-4 sm:px-5 py-2.5 rounded-full',
+                'h-9 w-9 sm:h-auto sm:w-auto sm:min-h-[46px] sm:min-w-[46px] sm:px-5 sm:py-2.5 rounded-full',
                 'font-mono text-xs sm:text-sm tracking-wider transition-colors duration-150',
                 'flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-[var(--accent)] select-none',
                 isActive
@@ -148,7 +148,7 @@ export default function Dock() {
         })}
 
         {/* Separator rule */}
-        <div className="h-6 w-px bg-[var(--border)] mx-1" aria-hidden="true" />
+        <div className="h-4 sm:h-6 w-px bg-[var(--border)] mx-0.5 sm:mx-1" aria-hidden="true" />
 
         {/* GitHub Logo Button with Spring Magnification */}
         <motion.a
@@ -161,7 +161,7 @@ export default function Dock() {
           whileTap={{ scale: 0.92 }}
           transition={{ type: 'spring', stiffness: 450, damping: 20 }}
           className={cn(
-            'min-h-[46px] min-w-[46px] rounded-full flex items-center justify-center',
+            'h-9 w-9 sm:min-h-[46px] sm:min-w-[46px] rounded-full flex items-center justify-center',
             'text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--panel)]',
             'transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent)]'
           )}
@@ -180,7 +180,7 @@ export default function Dock() {
           whileTap={{ scale: 0.92 }}
           transition={{ type: 'spring', stiffness: 450, damping: 20 }}
           className={cn(
-            'min-h-[46px] min-w-[46px] rounded-full flex items-center justify-center',
+            'h-9 w-9 sm:min-h-[46px] sm:min-w-[46px] rounded-full flex items-center justify-center',
             'text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--panel)]',
             'transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent)]'
           )}
@@ -199,7 +199,7 @@ export default function Dock() {
           whileTap={{ scale: 0.92 }}
           transition={{ type: 'spring', stiffness: 450, damping: 20 }}
           className={cn(
-            'min-h-[46px] min-w-[46px] rounded-full flex items-center justify-center',
+            'h-9 w-9 sm:min-h-[46px] sm:min-w-[46px] rounded-full flex items-center justify-center',
             'text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--panel)]',
             'transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent)]'
           )}
@@ -216,7 +216,7 @@ export default function Dock() {
           whileTap={{ scale: 0.92 }}
           transition={{ type: 'spring', stiffness: 450, damping: 20 }}
           className={cn(
-            'min-h-[46px] min-w-[46px] rounded-full flex items-center justify-center',
+            'h-9 w-9 sm:min-h-[46px] sm:min-w-[46px] rounded-full flex items-center justify-center',
             'text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--panel)]',
             'transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent)]'
           )}
@@ -225,7 +225,7 @@ export default function Dock() {
         </motion.a>
 
         {/* Separator rule */}
-        <div className="h-6 w-px bg-[var(--border)] mx-1" aria-hidden="true" />
+        <div className="h-4 sm:h-6 w-px bg-[var(--border)] mx-0.5 sm:mx-1" aria-hidden="true" />
 
         {/* Dark/Night Switch Button with Spring Magnification */}
         <motion.button
@@ -237,7 +237,7 @@ export default function Dock() {
           whileTap={{ scale: 0.92 }}
           transition={{ type: 'spring', stiffness: 450, damping: 20 }}
           className={cn(
-            'min-h-[46px] min-w-[46px] rounded-full flex items-center justify-center',
+            'h-9 w-9 sm:min-h-[46px] sm:min-w-[46px] rounded-full flex items-center justify-center',
             'text-[var(--text-muted)] hover:text-[var(--accent)] hover:bg-[var(--panel)]',
             'transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent)]'
           )}

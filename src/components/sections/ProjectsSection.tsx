@@ -219,7 +219,7 @@ export default function ProjectsSection() {
               >
                 <div>
                   {/* Top Line-Art Architecture Panel */}
-                  <div className="relative h-56 sm:h-64 lg:h-72 w-full border-b border-[var(--border)] bg-[var(--panel)] rounded-t-[17px] overflow-hidden p-6">
+                  <div className="relative h-56 sm:h-64 lg:h-72 w-full border-b border-[var(--border)] bg-[var(--panel)] rounded-t-[17px] overflow-hidden p-4 sm:p-6">
                     <span className="absolute top-4 left-6 font-mono text-xs uppercase tracking-wider text-[var(--text-muted)] z-10">
                       {label}
                     </span>
@@ -227,7 +227,7 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Card Content Body */}
-                  <div className="p-8 sm:p-10">
+                  <div className="p-6 sm:p-10">
                     <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)] tracking-tight">
                       {project.title}
                     </h3>
@@ -268,7 +268,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Bottom Actions Rule */}
-                <div className="px-8 sm:p-10 py-5 border-t border-[var(--border)] flex items-center justify-between font-mono text-xs sm:text-sm">
+                <div className="px-6 sm:px-10 py-4 sm:py-5 border-t border-[var(--border)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs sm:text-sm">
                   <Link
                     href={`/projects/${project.slug}`}
                     className="font-semibold text-[var(--text)] hover:text-[var(--accent)] transition-colors inline-flex items-center gap-1.5"

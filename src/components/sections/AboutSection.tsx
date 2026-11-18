@@ -66,7 +66,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-start">
           {/* Left Column: Narrative & Philosophy */}
           <div className="lg:col-span-5 flex flex-col gap-8">
-            <div className="rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-8 sm:p-10 card-shadow">
+            <div className="rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-10 card-shadow">
               <span className="font-mono text-xs sm:text-sm uppercase tracking-wider text-[var(--text-muted)]">
                 // ENGINEERING PHILOSOPHY
               </span>

@@ -42,11 +42,11 @@ export default function CapabilitiesSection() {
         </div>
 
         {/* 4 Category Blocks */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 xl:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 xl:gap-12">
           {STACK_CATEGORIES.map((category) => (
             <div
               key={category.title}
-              className="rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-8 sm:p-10 card-shadow"
+              className="rounded-[18px] border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-10 card-shadow"
             >
               {/* Category Header */}
               <div className="pb-5 mb-6 border-b border-[var(--border)]">
