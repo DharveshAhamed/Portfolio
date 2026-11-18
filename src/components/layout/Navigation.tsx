@@ -6,11 +6,15 @@ export default function Navigation() {
   return (
     <header className="w-full border-b border-[var(--border)] bg-[var(--bg)]/90 backdrop-blur-none z-40 transition-colors">
       <div className="mx-auto flex max-w-7xl 2xl:max-w-[1600px] items-center justify-between px-6 sm:px-10 lg:px-14 xl:px-16 2xl:px-20 py-4 sm:py-5 font-mono text-xs sm:text-sm">
-        {/* Left: @diveintodharvesh */}
+        {/* Left: Logo + @diveintodharvesh */}
         <Link
           href="/"
-          className="flex items-center text-[var(--text)] hover:text-[var(--accent)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent)]"
+          className="flex items-center gap-2.5 text-[var(--text)] hover:text-[var(--accent)] transition-colors focus-visible:outline-2 focus-visible:outline-[var(--accent)]"
         >
+          <div className="h-8 w-8 rounded-lg bg-[var(--accent)] flex items-center justify-center overflow-hidden p-1 shadow-sm shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-black.png" alt="Dharvesh Logo" className="h-full w-full object-contain" />
+          </div>
           <span className="font-semibold text-sm sm:text-base">@diveintodharvesh</span>
         </Link>
 

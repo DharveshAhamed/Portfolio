@@ -9,12 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center w-full">
           {/* Left Section: Monogram Badge (Orange) + Name + Title */}
           <div className="flex items-center gap-4 justify-start">
-            {/* Orange Monogram Tile */}
+            {/* Orange Monogram Tile with Custom Gothic D Logo */}
             <div
-              className="h-13 w-13 sm:h-14 sm:w-14 rounded-2xl bg-[var(--accent)] flex items-center justify-center text-[#161616] font-black text-2xl shadow-sm shrink-0 select-none"
+              className="h-13 w-13 sm:h-14 sm:w-14 rounded-2xl bg-[var(--accent)] flex items-center justify-center overflow-hidden p-2.5 shadow-sm shrink-0 select-none"
               aria-hidden="true"
             >
-              D
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-black.png" alt="Dharvesh Logo" className="h-full w-full object-contain" />
             </div>
 
             <div className="flex flex-col">
